@@ -25,8 +25,8 @@ public class Word {
 	}
 	
 	public boolean isConsonant(int i) {
-		return !"aeiou".contains(letters.substring(i, i + 1));
-		
+//		return !"aeiou".contains(letters.substring(i, i + 1));
+		return !isVowel2(i);
 	}
 
 	public static void main(String[] args) {
