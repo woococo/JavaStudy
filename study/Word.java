@@ -19,12 +19,21 @@ public class Word {
 		}
 		return result;
 	}
+	
+	public boolean isVowel2(int i) {
+		return "aeiou".contains(letters.substring(i, i + 1));
+	}
+	
+	public boolean isConsonant(int i) {
+		return !"aeiou".contains(letters.substring(i, i + 1));
+		
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Word word = new Word("Hello World");
-		System.out.println(word.isVowel(0));
-		System.out.println(word.isVowel(1));
+		System.out.println(word.isConsonant(0));
+		System.out.println(word.isConsonant(1));
 	}
 
 }
