@@ -9,11 +9,15 @@ public class Word {
 
 	// i번째 글자가 모음인지 알려주는 메소드
 	public boolean isVowel(int i) {
-		return letters.substring(i, i + 1).equals("a")
-				 || letters.substring(i, i + 1).equals("e")
-				 || letters.substring(i, i + 1).equals("i")
-				 || letters.substring(i, i + 1).equals("o")
-				 || letters.substring(i, i + 1).equals("u");
+		boolean result = false;
+		String vowel[] = { "a", "e", "i", "o", "u" };
+		for (int j = 0; j < vowel.length; j++) {
+			if (letters.substring(i, i + 1).equals(vowel[j])) {
+				result = true;
+				break;
+			}
+		}
+		return result;
 	}
 
 	public static void main(String[] args) {
